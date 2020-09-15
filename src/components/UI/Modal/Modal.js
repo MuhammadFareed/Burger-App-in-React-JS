@@ -5,7 +5,7 @@ import Backdrop from '../Backdrop/Backdrop';
 
 class Modal extends Component {
       shouldComponentUpdate = (nextProps) => {
-            if(nextProps.show !==  this.props.show) {
+            if(nextProps.show !==  this.props.show || nextProps.children !== this.props.children) {
                   return true;
             } else {
                   return false;
@@ -28,7 +28,8 @@ class Modal extends Component {
                               {this.props.children}
                         </div>
                   </Auxilliary>
-            );}
+            );
+      }
 }
 
 export default Modal;
